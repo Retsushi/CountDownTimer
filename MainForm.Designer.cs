@@ -116,7 +116,7 @@
             Controls.Add(Lbl_Minute);
             Controls.Add(Lbl_Time);
             Name = "MainForm";
-            Text = "CountDownTimer";
+            Text = "CountDownTimer_ZEN POWER";
             ResumeLayout(false);
             PerformLayout();
         }
