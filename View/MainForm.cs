@@ -23,7 +23,8 @@ namespace CountDownTimer
 
         public void Btn_1SecUp_Click(object sender, EventArgs e)
         {
-            // Mainƒuƒ‰ƒ“ƒ`‚¾‚º
+            // nannkayaruyo
+            // Main
         }
     }
 }
