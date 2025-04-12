@@ -93,6 +93,7 @@
             Btn_1SecUP.TabIndex = 5;
             Btn_1SecUP.Text = "+1";
             Btn_1SecUP.UseVisualStyleBackColor = true;
+            Btn_1SecUP.Click += this.Btn_1SecUp_Click;
             // 
             // Btn_1SecDwn
             // 

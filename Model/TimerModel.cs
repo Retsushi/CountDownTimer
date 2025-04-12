@@ -30,7 +30,7 @@ namespace CountDownTimer.Model
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException("Seconds cannot be negative.");
+                    seconds = 0;
                 }
             }
         }
