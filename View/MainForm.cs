@@ -23,10 +23,7 @@ namespace CountDownTimer
 
         public void Btn_1SecUp_Click(object sender, EventArgs e)
         {
-            // Increment the seconds by 1
-            int currentSeconds = int.Parse(Lbl_Time.Text.Substring(3, 2));
-            currentSeconds++;
-            UpdateTime(currentSeconds);
+            // Mainƒuƒ‰ƒ“ƒ`‚¾‚º
         }
     }
 }
