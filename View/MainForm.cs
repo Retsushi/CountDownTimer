@@ -1,5 +1,4 @@
 using CountDownTimer.Controller;
-using CountDownTimer.Model;
 
 namespace CountDownTimer
 {
