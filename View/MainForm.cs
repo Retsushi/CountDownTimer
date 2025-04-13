@@ -7,7 +7,6 @@ namespace CountDownTimer
     {
         private TimerController TCtrl;
 
-
         public MainForm()
         {
             TCtrl = TimerController.ControllerInstance;

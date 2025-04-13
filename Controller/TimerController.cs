@@ -20,36 +20,23 @@ namespace CountDownTimer.Controller
         // Singleton Property
         public static TimerController ControllerInstance
         {
-            get
-            {
-                return _instance;
-            }
+            get { return _instance; }
         }
 
 
         public int AddSec(int add)
         {
-            if (TModel.Seconds + add >= 0)
-            {
-                TModel.Seconds += add;
-            }
-            else
-            {
-                TModel.Seconds = 0;
-            }
+            if (TModel.Seconds + add >= 0) TModel.Seconds += add;
+            else TModel.Seconds = 0;
+
             return TModel.Seconds;
         }
 
         public int SubSec(int sub)
         {
-            if (TModel.Seconds - sub >= 0)
-            {
-                TModel.Seconds -= sub;
-            }
-            else
-            {
-                TModel.Seconds = 0;
-            }
+            if (TModel.Seconds - sub >= 0) TModel.Seconds -= sub;
+            else TModel.Seconds = 0;
+
             return TModel.Seconds;
         }
     }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace CountDownTimer.Model
 {
     internal class TimerModel
@@ -13,10 +8,7 @@ namespace CountDownTimer.Model
 
         public static TimerModel TimerModelInstance
         {
-            get
-            {
-                return _instance;
-            }
+            get { return _instance; }
         }
 
         public int Seconds
@@ -24,14 +16,8 @@ namespace CountDownTimer.Model
             get { return seconds; }
             set
             {
-                if (value >= 0)
-                {
-                    seconds = value;
-                }
-                else
-                {
-                    seconds = 0;
-                }
+                if (value >= 0) seconds = value;
+                else seconds = 0;
             }
         }
 
