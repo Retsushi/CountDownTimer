@@ -9,13 +9,13 @@ namespace CountDownTimer.Model
     internal class TimerModel
     {
         private int seconds;
-        private TimerModel timerModel = new TimerModel();
+        private static  TimerModel _instance = new TimerModel();
 
-        public TimerModel TimerModelInstance
+        public static TimerModel TimerModelInstance
         {
             get
             {
-                return timerModel;
+                return _instance;
             }
         }
 
