@@ -1,15 +1,16 @@
+using CountDownTimer.Controller;
+using CountDownTimer.Model;
+
 namespace CountDownTimer
 {
     public partial class MainForm : Form
     {
-        private Model.TimerModel timerModel;
-        private Controller.Controller controller;
+        private TimerController TCtrl;
 
 
         public MainForm()
         {
-            //controller = Controller.Controller.ControllerInstance;
-            //timerModel = Model.TimerModel.TimerModelInstance;
+            TCtrl = TimerController.ControllerInstance;
             InitializeComponent();
         }
 
@@ -23,8 +24,26 @@ namespace CountDownTimer
 
         public void Btn_1SecUp_Click(object sender, EventArgs e)
         {
-            // nannkayaruyo
-            // Main
+            int seconds = TCtrl.AddSec(1);
+            UpdateTime(seconds);
+        }
+
+        public void Btn_1SecDwn_Click(object sender, EventArgs e)
+        {
+            int seconds = TCtrl.SubSec(1);
+            UpdateTime(seconds);
+        }
+
+        public void Btn_1MinUp_Click(object sender, EventArgs e)
+        {
+            int seconds = TCtrl.AddSec(60);
+            UpdateTime(seconds);
+        }
+
+        public void Btn_1MinDwn_Click(object sender, EventArgs e)
+        {
+            int seconds = TCtrl.SubSec(60);
+            UpdateTime(seconds);
         }
     }
 }
