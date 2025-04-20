@@ -29,12 +29,14 @@ namespace CountDownTimer.Model
         public TimerModel()
         {
             seconds = 0;
-            UpdateViewTime = null;
+            UpdateViewTime = _ => { }; // Initialize with a no-op delegate
+            UpdateViewButton = _ => { }; // Initialize with a no-op delegate
             timer = new System.Windows.Forms.Timer();
             timer.Interval = 1000; // 1 second
             timer.Tick += Timer_Tick;
             timer.Stop();
         }
+
         private void Timer_Tick(object sender, EventArgs e)
         {
             if (seconds > 0)

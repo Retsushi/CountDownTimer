@@ -4,7 +4,6 @@ namespace CountDownTimer
 {
     public partial class MainForm : Form
     {
-        private TimerController TCtrl;
         public Button Btn1SecUP() { return Btn_1SecUP; }
         public Button Btn1SecDwn() { return Btn_1SecDwn; }
         public Button BtnMin1Up() { return Btn_Min1Up; }
