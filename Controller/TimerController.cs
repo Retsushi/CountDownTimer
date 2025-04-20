@@ -14,11 +14,13 @@ namespace CountDownTimer.Controller
         {
             TModel = new TimerModel();
             Mform = new MainForm();
-            TModel.UpdateView += Mform.UpdateTime;
+            TModel.UpdateViewTime += Mform.UpdateTime;
+            TModel.UpdateViewButton += Mform.UpdateButton;
             Mform.Btn1SecUP().Click += Btn_1SecUp_Click!;
             Mform.Btn1SecDwn().Click += Btn_1SecDwn_Click!;
             Mform.BtnMin1Up().Click += Btn_1MinUp_Click!;
             Mform.BtnMin1Dwn().Click += Btn_1MinDwn_Click!;
+            Mform.BtnStartStop().Click += Btn_StartStop_Click!;
             Application.Run(Mform);
         }
 
@@ -62,7 +64,7 @@ namespace CountDownTimer.Controller
 
         private void Btn_StartStop_Click(object sender, EventArgs e)
         {
-
+            TModel.ChangeStateTimer();
         }
     }
 }

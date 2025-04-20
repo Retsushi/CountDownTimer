@@ -1,4 +1,4 @@
-using CountDownTimer.Controller;
+﻿using CountDownTimer.Controller;
 
 namespace CountDownTimer
 {
@@ -22,6 +22,18 @@ namespace CountDownTimer
             int remainingSeconds = seconds % 60;
             // Update the label with the formatted time
             Lbl_Time.Text = $"{minutes:D2}:{remainingSeconds:D2}";
+        }
+
+        public void UpdateButton(int state)
+        {
+            if (state == 0)
+            {
+                Btn_StartStop.Text = "▶";
+            }
+            else
+            {
+                Btn_StartStop.Text = "ll";
+            }
         }
 
     }

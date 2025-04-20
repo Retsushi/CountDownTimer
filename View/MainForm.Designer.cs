@@ -107,7 +107,8 @@
             // Btn_StartStop
             // 
             Btn_StartStop.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            Btn_StartStop.Location = new Point(170, 290);
+            Btn_StartStop.Font = new Font("Yu Gothic UI", 9F, FontStyle.Bold);
+            Btn_StartStop.Location = new Point(176, 286);
             Btn_StartStop.Name = "Btn_StartStop";
             Btn_StartStop.Size = new Size(30, 30);
             Btn_StartStop.TabIndex = 7;
