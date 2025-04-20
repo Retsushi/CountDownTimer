@@ -37,7 +37,7 @@ namespace CountDownTimer.Model
             timer.Stop();
         }
 
-        private void Timer_Tick(object sender, EventArgs e)
+        private void Timer_Tick(object? sender, EventArgs e)
         {
             if (seconds > 0)
             {
