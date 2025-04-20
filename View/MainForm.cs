@@ -1,6 +1,4 @@
-﻿using CountDownTimer.Controller;
-
-namespace CountDownTimer
+﻿namespace CountDownTimer
 {
     public partial class MainForm : Form
     {

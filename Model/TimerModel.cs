@@ -1,7 +1,4 @@
 ﻿
-using System.Runtime.CompilerServices;
-using System.Windows.Forms;
-
 namespace CountDownTimer.Model
 {
     internal class TimerModel
