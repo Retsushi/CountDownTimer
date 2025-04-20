@@ -1,28 +1,26 @@
 ﻿
 using CountDownTimer.Model;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CountDownTimer.Controller
 {
-    internal class TimerController
+    public class TimerController
     {
-
         TimerModel TModel;
-
-        // Singleton instance
-        private static TimerController _instance = new TimerController();
+        MainForm Mform;
 
         // Constructor
-        private TimerController()
+        public TimerController()
         {
-            TModel = TimerModel.TimerModelInstance;
+            TModel = new TimerModel();
+            Mform = new MainForm();
+            TModel.UpdateView += Mform.UpdateTime;
+            Mform.Btn1SecUP().Click += Btn_1SecUp_Click!;
+            Mform.Btn1SecDwn().Click += Btn_1SecDwn_Click!;
+            Mform.BtnMin1Up().Click += Btn_1MinUp_Click!;
+            Mform.BtnMin1Dwn().Click += Btn_1MinDwn_Click!;
+            Application.Run(Mform);
         }
-
-        // Singleton Property
-        public static TimerController ControllerInstance
-        {
-            get { return _instance; }
-        }
-
 
         public int AddSec(int add)
         {
@@ -38,6 +36,33 @@ namespace CountDownTimer.Controller
             else TModel.Seconds = 0;
 
             return TModel.Seconds;
+        }
+
+        [MemberNotNullWhen(true, nameof(TModel))]
+        public void Btn_1SecUp_Click(object sender, EventArgs e)
+        {
+            AddSec(1);
+        }
+
+        public void Btn_1SecDwn_Click(object sender, EventArgs e)
+        {
+            SubSec(1);
+            
+        }
+
+        public void Btn_1MinUp_Click(object sender, EventArgs e)
+        {
+            AddSec(60);
+        }
+
+        public void Btn_1MinDwn_Click(object sender, EventArgs e)
+        {
+            SubSec(60);
+        }
+
+        private void Btn_StartStop_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
